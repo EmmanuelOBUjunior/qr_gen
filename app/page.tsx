@@ -17,7 +17,9 @@ export default function Home() {
           <button
             onClick={() => setSelectedType("url")}
             className={`px-4 py-2 rounded ${
-              selectedType === "url" ? "bg-blue-500 text-white" : "bg-gray-200 text-black"
+              selectedType === "url"
+                ? "bg-blue-500 text-white"
+                : "bg-gray-200 text-black"
             }`}
           >
             URL
@@ -25,13 +27,15 @@ export default function Home() {
           <button
             onClick={() => setSelectedType("pdf")}
             className={`px-4 py-2 rounded ${
-              selectedType === "pdf" ? "bg-blue-500 text-white" : "bg-gray-200 text-black"
+              selectedType === "pdf"
+                ? "bg-blue-500 text-white"
+                : "bg-gray-200 text-black"
             }`}
           >
             PDF
           </button>
           <button
-          onClick={()=> setSelectedType("contact")}
+            onClick={() => setSelectedType("contact")}
             className={`px-4 py-2 rounded ${
               selectedType === "contact"
                 ? "bg-blue-500 text-white"
@@ -41,12 +45,11 @@ export default function Home() {
             Contact
           </button>
         </div>
-           <div>
-            {selectedType === 'url' && <URLInput/>}
-            {selectedType === 'pdf' && <PDFUploader/>}
-            {selectedType === 'contact' && <ContactForm/>}
-          </div> 
-
+        <div>
+          {selectedType === "url" && <URLInput />}
+          {selectedType === "pdf" && <PDFUploader />}
+          {selectedType === "contact" && <ContactForm />}
+        </div>
       </div>
     </main>
   );
