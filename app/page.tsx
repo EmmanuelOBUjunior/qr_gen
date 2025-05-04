@@ -38,6 +38,10 @@ export default function Home() {
             Contact
           </button>
         </div>
+           <div>
+            {selectedType === 'url' && <URLInput/>}
+          </div> 
+
       </div>
     </main>
   );
