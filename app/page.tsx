@@ -12,9 +12,9 @@ export default function Home() {
         </h1>
         <div className="flex justify-center gap-4 mb-8">
           <button
-            onClick={() => setSelectedType("pdf")}
+            onClick={() => setSelectedType("url")}
             className={`px-4 py-2 rounded ${
-              selectedType === "url" ? "bg-blue-500 text-white" : "bg-gray-200"
+              selectedType === "url" ? "bg-blue-500 text-white" : "bg-gray-200 text-black"
             }`}
           >
             URL
