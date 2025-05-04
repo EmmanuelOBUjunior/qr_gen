@@ -22,7 +22,7 @@ export default function Home() {
           <button
             onClick={() => setSelectedType("pdf")}
             className={`px-4 py-2 rounded ${
-              selectedType === "pdf" ? "bg-blue-500 text-white" : "g-gray-200"
+              selectedType === "pdf" ? "bg-blue-500 text-white" : "bg-gray-200 text-black"
             }`}
           >
             PDF
@@ -32,7 +32,7 @@ export default function Home() {
             className={`px-4 py-2 rounded ${
               selectedType === "contact"
                 ? "bg-blue-500 text-white"
-                : "bg-gray-200"
+                : "bg-gray-200 text-black"
             }`}
           >
             Contact
