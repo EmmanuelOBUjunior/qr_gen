@@ -11,7 +11,9 @@ export default function Home(){
           QR Code Generator
         </h1>
         <div className="flex justify-center gap-4 mb-8">
-          <button className={`px-4 py-2 rounded ${selectedType === 'url'? 'bg-blue-500 text-white': 'g-gray-200'}`}>URL</button>
+          <button onClick={()=>setSelectedType('pdf')} className={`px-4 py-2 rounded ${selectedType === 'url'? 'bg-blue-500 text-white': 'bg-gray-200'}`}>URL</button>
+          <button onClick={()=>setSelectedType('pdf')} className={`px-4 py-2 rounded ${selectedType === 'pdf'? 'bg-blue-500 text-white': 'g-gray-200'}`}>PDF</button>
+          <button className={`px-4 py-2 rounded ${selectedType === 'contact'? 'bg-blue-500 text-white': 'bg-gray-200'}`}>Contact</button>
         </div>
       </div>
     </main>
