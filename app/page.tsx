@@ -10,6 +10,9 @@ export default function Home(){
         <h1 className="text-4xl font-bold text-center mb-8">
           QR Code Generator
         </h1>
+        <div className="flex justify-center gap-4 mb-8">
+          <button className={`px-4 py-2 rounded ${selectedType === 'url'? 'bg-blue-500 text-white': 'g-gray-200'}`}>URL</button>
+        </div>
       </div>
     </main>
   )
