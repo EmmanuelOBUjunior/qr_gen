@@ -1,4 +1,7 @@
 "use client";
+import ContactForm from "@/components/ContactForm";
+import PDFUploader from "@/components/PDFUploader";
+import URLInput from "@/components/URLInput";
 import { useState } from "react";
 
 type QRType = "pdf" | "url" | "contact";
@@ -40,6 +43,8 @@ export default function Home() {
         </div>
            <div>
             {selectedType === 'url' && <URLInput/>}
+            {selectedType === 'pdf' && <PDFUploader/>}
+            {selectedType === 'contact' && <ContactForm/>}
           </div> 
 
       </div>
