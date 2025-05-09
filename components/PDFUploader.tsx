@@ -1,4 +1,5 @@
-import React from 'react'
+import {useState} from 'react'
+import  QRCode  from 'qrcode'
 
 const PDFUploader = () => {
   return (
