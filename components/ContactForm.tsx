@@ -15,6 +15,7 @@ const ContactForm = () => {
     email: '',
     organization: ''
   })
+  const [qrCode setQrCode] = useState<string>('')
   return (
     <div>ContactForm</div>
   )
