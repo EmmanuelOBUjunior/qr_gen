@@ -47,7 +47,7 @@ const URLInput = () => {
       </button>
       {error && <p className="text-red-500">{error}</p>}
       {qrCode && <div className="text-center">
-        <Image src={qrCode} alt="QR Code" className="mx-auto" width={100} height={100}/><a className="mt-2 inline-block text-blue-500 hover:text-blue-600 hover:cursor-pointer" download='qr-code.png' href={qrCode}>Download QR Code</a>
+        <Image src={qrCode} alt="QR Code" className="mx-auto" width={200} height={200}/><a className="mt-2 inline-block text-blue-500 hover:text-blue-600 hover:cursor-pointer" download='qr-code.png' href={qrCode}>Download QR Code</a>
         </div>}
     </div>
   );
