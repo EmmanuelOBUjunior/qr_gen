@@ -40,7 +40,7 @@ ${contact.organization ? `ORG:${contact.organization}\n` : ''}END:VCARD`;
   };
 
   return (
-    <form className="space-y-4" onSubmit={handleSubmit}>
+    <form className="space-y-6" onSubmit={handleSubmit}>
       <div>
         <label
           htmlFor="name"
@@ -129,9 +129,9 @@ ${contact.organization ? `ORG:${contact.organization}\n` : ''}END:VCARD`;
             >
               Download QR Code
             </a>
-          
+          </div>
         )}
-      </div>
+      
     </form>
   );
 };
