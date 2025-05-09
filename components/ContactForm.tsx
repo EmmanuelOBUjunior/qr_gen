@@ -60,18 +60,18 @@ ${contact.organization ? `ORG:${contact.organization}\n` : ""}END:VCARD`;
       </div>
       <div>
         <label
-          htmlFor="firstName"
+          htmlFor="lastName"
           className="block text-sm font-medium text-gray-700"
         >
-          First Name
+          Last Name
         </label>
         <input
           type="text"
-          id="firstName"
+          id="lastName"
           className="p-2 mt-1 block w-full rounded border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-          value={contactInfo.firstName}
+          value={contactInfo.lastName}
           onChange={(e) =>
-            setContactInfo({ ...contactInfo, firstName: e.target.value })
+            setContactInfo({ ...contactInfo, lastName: e.target.value })
           }
         />
       </div>
