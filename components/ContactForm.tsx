@@ -91,14 +91,14 @@ const ContactForm = () => {
           <input
             type="text"
             id="organization"
-            className="mt-1 block w-full rounded border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            className="p-2 mt-1 block w-full rounded border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
             value={contactInfo.organization}
             onChange={(e) =>
               setContactInfo({...contactInfo, organization: e.target.value })
             }
           />
         </div>
-        <button className="w-full bg-blue-500 rounded text-white py-2 px-4 hover:bg-bblue-600">Generate QR Code</button>
+        <button className="mt-2w-full bg-blue-500 rounded text-white py-2 px-4 hover:bg-blue-600">Generate QR Code</button>
       </div>
     </form>
   );
