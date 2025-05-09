@@ -86,6 +86,9 @@ const ContactForm = () => {
             }
           />
         </div>
+        <div>
+          <label htmlFor="organization">Organization (Optional)</label>
+        </div>
       </div>
     </form>
   );
