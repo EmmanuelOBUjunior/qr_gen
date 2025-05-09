@@ -19,6 +19,17 @@ const ContactForm = () => {
   const generateVCard = async(contact:ContactInfo)=>{
       return `BEGIN:VCARD VERSION:3.0 FN:${contact.name} TEL:${contact.phone} EMAIL:${contact.email} ${contact.organization ? `ORG:${contact.organization}\n`: ''}  END:VCARD`
   }
+  const handleSubmit = async(e:React.FormEvent<HTMLFormElement>)=>{
+    e.preventDefault()
+    try{
+      const vCard = await generateVCard(contactInfo)
+      const qrCode = await QRCode.toDataURL(vCard)
+      setQrCode(qrCode)
+    }catch(error){
+      console.log("Failed to generate QR code",error)
+    }
+  }
+}
   return (
     <div>ContactForm</div>
   )
