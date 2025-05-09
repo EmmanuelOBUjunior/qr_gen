@@ -46,7 +46,7 @@ const ContactForm = () => {
         <input
           type="text"
           id="name"
-          className="mt-1 p-2 w-full border rounded-md"
+          className="p-2 mt-1 block w-full rounded border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
           value={contactInfo.name}
           onChange={(e) =>
             setContactInfo({ ...contactInfo, name: e.target.value })
@@ -62,7 +62,7 @@ const ContactForm = () => {
           <input
             type="tel"
             id="phone"
-            className="mt-1 p-2 w-full border rounded-md"
+            className="p-2 mt-1 block w-full rounded border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
             value={contactInfo.phone}
             onChange={(e) =>
               setContactInfo({ ...contactInfo, phone: e.target.value })
@@ -79,7 +79,7 @@ const ContactForm = () => {
           <input
             type="email"
             id="email"
-            className="mt-1 p-2 w-full border rounded-md"
+            className="mt-1 block w-full rounded border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
             value={contactInfo.email}
             onChange={(e) =>
               setContactInfo({ ...contactInfo, email: e.target.value })
@@ -91,7 +91,7 @@ const ContactForm = () => {
           <input
             type="text"
             id="organization"
-            className="mt-1 block w-full rounded border-gray-399 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            className="mt-1 block w-full rounded border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
             value={contactInfo.organization}
             onChange={(e) =>
               setContactInfo({...contactInfo, organization: e.target.value })
