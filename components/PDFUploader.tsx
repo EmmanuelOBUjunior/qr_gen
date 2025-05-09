@@ -15,6 +15,7 @@ const PDFUploader = () => {
         setError('')
       }else{
         setError('Please select a PDF file')
+        setFile(null)
       }
     }
   }
