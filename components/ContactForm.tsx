@@ -103,7 +103,7 @@ const ContactForm = () => {
 
         {qrCode && (
           <div className='text-center'>
-            <Image width={100} height={100} src={qrCode} alt="QR Code"/>
+            <Image width={100} height={100} src={qrCode} alt="QR Code" className="mx-auto"/>
           </div>
         )}
       </div>
