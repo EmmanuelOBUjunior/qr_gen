@@ -88,6 +88,7 @@ const ContactForm = () => {
         </div>
         <div>
           <label htmlFor="organization">Organization (Optional)</label>
+          <input type="text" id="organization" className="mt-1 block w-full rounded border-gray-399 shadow-sm focus:border-blue-500 focus:ring-blue-500"/>
         </div>
       </div>
     </form>
