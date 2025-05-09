@@ -32,7 +32,7 @@ const URLInput = () => {
         <input
           type="url"
           id="url"
-          className="mt-1 block w-full rounded-md border-gray-500 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           placeholder="https://example.com"
