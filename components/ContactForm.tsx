@@ -92,6 +92,10 @@ const ContactForm = () => {
             type="text"
             id="organization"
             className="mt-1 block w-full rounded border-gray-399 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            value={contactInfo.organization}
+            onChange={(e) =>
+              setContactInfo({...contactInfo, organization: e.target.value })
+            }
           />
         </div>
       </div>
