@@ -1,5 +1,6 @@
 import { useState } from "react";
 import QRCode from "qrcode";
+import Image from "next/image";
 
 const URLInput = () => {
   const [url, setUrl] = useState("");
@@ -38,11 +39,16 @@ const URLInput = () => {
           placeholder="https://example.com"
         />
       </div>
-      <button onClick={generateQRCode} className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Generate QR Code</button>
+      <button
+        onClick={generateQRCode}
+        className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
+      >
+        Generate QR Code
+      </button>
       {error && <p className="text-red-500">{error}</p>}
-      {qrCode && (<div>
-        
-        </div>)}
+      {qrCode && <div>
+        <Image src={qrCode} alt="QR Code" className="mx-auto"/><a className="mt-2 inline-block text-blue-500 hover:text-blue-600">Download QR Code</a>
+        </div>}
     </div>
   );
 };
