@@ -4,12 +4,16 @@ import  QRCode  from 'qrcode'
 const PDFUploader = () => {
   const [file, setFile] = useState<File | null>(null)
   const [uploading, setUploading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
+  const [error, setError] = useState<string>('')
   const [qrCode, setQrCode] = useState<string | null>(null)
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if(e.target.files && e.target.files[0]){
-      setFile(e.target.files[0])
+      const selectedFile = e.target.files[0]
+      if(selectedFile.type === 'application/pdf'){
+        setFile(selectedFile)
+        setError('')
+      }
     }
   }
   return (
