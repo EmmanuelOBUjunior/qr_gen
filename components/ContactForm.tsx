@@ -69,6 +69,23 @@ const ContactForm = () => {
             }
           />
         </div>
+        <div>
+          <label
+            htmlFor="email"
+            className="block text-sm font-medium text-gray-700"
+          >
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            className="mt-1 p-2 w-full border rounded-md"
+            value={contactInfo.email}
+            onChange={(e) =>
+              setContactInfo({...contactInfo, email: e.target.value })
+            }
+          />
+        </div>
       </div>
     </form>
   );
