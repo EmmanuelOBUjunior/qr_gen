@@ -36,7 +36,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form className="space-y-4" onSubmit={handleSubmit}>
+    <form className="space-y-6" onSubmit={handleSubmit}>
       <div>
         <label
           htmlFor="name"
@@ -103,7 +103,7 @@ const ContactForm = () => {
 
         {qrCode && (
           <div className='text-center'>
-            <Image width={100} height={100} src={qrCode} alt="QR Code" className="mx-auto"/>
+            <Image width={250} height={250} src={qrCode} alt="QR Code" className="mx-auto"/>
             <a className="mt-2 inline-block text-blue-500 hover:text-blue-600" download='contact-qr-code.png' href={qrCode}>Download QR Code</a>
           </div>
         )}
