@@ -32,12 +32,13 @@ const URLInput = () => {
         <input
           type="url"
           id="url"
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+          className="mt-1 block w-full rounded-md border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2"
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           placeholder="https://example.com"
         />
       </div>
+      <button onClick={generateQRCode} className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Generate QR Code</button>
     </div>
   );
 };
