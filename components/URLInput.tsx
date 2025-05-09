@@ -24,6 +24,7 @@ const URLInput = () => {
     <div className="space-y-4">
       <div>
         <label htmlFor="url" className="block text-sm font-medium text-gray-700">Enter URL</label>
+        <input type="url" id="url" className="mt-1 block w-full rounded-md bborder-gray-500 shadow-sm focus:border-blue-500 focus:ring-blue-500"/>
       </div>
     </div>
   )
