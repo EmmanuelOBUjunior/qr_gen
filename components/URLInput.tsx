@@ -21,7 +21,11 @@ const URLInput = () => {
       }
     }
   return (
-    <div>URLInput</div>
+    <div className="space-y-4">
+      <div>
+        <label htmlFor="url" className="block text-sm font-medium text-gray-700">Enter URL</label>
+      </div>
+    </div>
   )
 }
 
