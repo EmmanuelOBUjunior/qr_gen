@@ -35,6 +35,10 @@ const ContactForm = () => {
       <div>
         <label htmlFor='name' className='block text-sm font-medium text-gray-700'>Name</label>
         <input type='text' id='name' className='mt-1 p-2 w-full border rounded-md' value={contactInfo.name} onChange={(e)=>setContactInfo({...contactInfo,name:e.target.value})}/>
+        <div>
+          <label htmlFor='phone' className='block text-sm font-medium text-gray-700'>Phone</label>
+          <input type='tel' id='phone' className='mt-1 p-2 w-full border rounded-md' value={contactInfo.phone} onChange={(e)=>setContactInfo({...contactInfo,phone:e.target.value})}/>
+        </div>
       </div>
     </form>
   )
