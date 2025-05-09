@@ -13,6 +13,8 @@ const PDFUploader = () => {
       if(selectedFile.type === 'application/pdf'){
         setFile(selectedFile)
         setError('')
+      }else{
+        setError('Please select a PDF file')
       }
     }
   }
