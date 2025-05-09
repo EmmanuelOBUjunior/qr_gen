@@ -33,6 +33,9 @@ const URLInput = () => {
           type="url"
           id="url"
           className="mt-1 block w-full rounded-md bborder-gray-500 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+          value={url}
+          onChange={(e) => setUrl(e.target.value)}
+          
         />
       </div>
     </div>
