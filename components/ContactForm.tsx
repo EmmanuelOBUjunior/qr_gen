@@ -29,7 +29,7 @@ const ContactForm = () => {
       console.log("Failed to generate QR code",error)
     }
   }
-}
+
   return (
     <div>ContactForm</div>
   )
