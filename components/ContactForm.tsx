@@ -31,7 +31,12 @@ const ContactForm = () => {
   }
 
   return (
-    <form className='space-y-4' onSubmit={handleSubmit}>ContactForm</form>
+    <form className='space-y-4' onSubmit={handleSubmit}>
+      <div>
+        <label htmlFor='name' className='block text-sm font-medium text-gray-700'>Name</label>
+        <input type='text' id='name' className='mt-1 p-2 w-full border rounded-md' value={contactInfo.name} onChange={(e)=>setContactInfo({...contactInfo,name:e.target.value})}/>
+      </div>
+    </form>
   )
 }
 
