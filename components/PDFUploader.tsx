@@ -19,6 +19,16 @@ const PDFUploader = () => {
       }
     }
   }
+  const handleUpload = async()=>{
+    if(!file) return
+    setUploading(true)
+    try{
+      const formData = new FormData()
+      formData.append('file', file)
+    }catch(error){
+      console.error(error)
+    }
+  }
   return (
     <div>PDFUploader</div>
   )
