@@ -98,7 +98,7 @@ const ContactForm = () => {
             }
           />
         </div>
-        <button className="mt-2w-full bg-blue-500 rounded text-white py-2 px-4 hover:bg-blue-600">Generate QR Code</button>
+        <button className="mt-2 w-full bg-blue-500 rounded text-white py-2 px-4 hover:bg-blue-600">Generate QR Code</button>
       </div>
     </form>
   );
