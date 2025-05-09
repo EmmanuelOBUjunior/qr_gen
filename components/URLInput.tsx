@@ -39,6 +39,10 @@ const URLInput = () => {
         />
       </div>
       <button onClick={generateQRCode} className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Generate QR Code</button>
+      {error && <p className="text-red-500">{error}</p>}
+      {qrCode && (<div>
+        
+        </div>)}
     </div>
   );
 };
