@@ -1,5 +1,6 @@
 import { useState } from "react";
 import QRCode from "qrcode";
+import Image from "next/image";
 
 interface ContactInfo {
   name: string;
@@ -87,7 +88,7 @@ const ContactForm = () => {
           />
         </div>
         <div>
-          <label htmlFor="organization">Organization (Optional)</label>
+          <label htmlFor="organization" className="block text-sm font-medium text-gray-700">Organization (Optional)</label>
           <input
             type="text"
             id="organization"
@@ -99,6 +100,12 @@ const ContactForm = () => {
           />
         </div>
         <button className="mt-2 w-full bg-blue-500 rounded text-white py-2 px-4 hover:bg-blue-600">Generate QR Code</button>
+
+        {qrCode && (
+          <div className='text-center'>
+            <Image width={100} height={100} src={qrCode} alt="QR Code"/>
+          </div>
+        )}
       </div>
     </form>
   );
