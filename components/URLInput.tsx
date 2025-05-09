@@ -4,6 +4,10 @@ const URLInput = () => {
     const [url, setUrl] = useState("");
     const [qrCode, setQrCode] = useState('')
     const [error, setError] = useState('')
+
+    const generateQRCode = async()=>{
+      
+    }
   return (
     <div>URLInput</div>
   )
