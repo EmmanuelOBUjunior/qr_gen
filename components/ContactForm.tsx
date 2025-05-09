@@ -3,7 +3,8 @@ import QRCode from "qrcode";
 import Image from "next/image";
 
 interface ContactInfo {
-  name: string;
+  firstName: string;
+  lastName: string;
   phone: string;
   email: string;
   organization?: string;
@@ -11,7 +12,8 @@ interface ContactInfo {
 
 const ContactForm = () => {
   const [contactInfo, setContactInfo] = useState<ContactInfo>({
-    name: "",
+    firstName: "",
+    lastName: "",
     phone: "",
     email: "",
     organization: "",
@@ -20,7 +22,8 @@ const ContactForm = () => {
   const generateVCard = (contact: ContactInfo) => {
     return `BEGIN:VCARD
 VERSION:3.0
-FN:${contact.name}
+FN:${contact.firstName}
+LN:${contact.lastName}
 TEL:${contact.phone}
 EMAIL:${contact.email}
 ${contact.organization ? `ORG:${contact.organization}\n` : ''}END:VCARD`;
@@ -37,7 +40,7 @@ ${contact.organization ? `ORG:${contact.organization}\n` : ''}END:VCARD`;
   };
 
   return (
-    <form className="space-y-6" onSubmit={handleSubmit}>
+    <form className="space-y-4" onSubmit={handleSubmit}>
       <div>
         <label
           htmlFor="name"
@@ -49,11 +52,12 @@ ${contact.organization ? `ORG:${contact.organization}\n` : ''}END:VCARD`;
           type="text"
           id="name"
           className="p-2 mt-1 block w-full rounded border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-          value={contactInfo.name}
+          value={contactInfo.firstName}
           onChange={(e) =>
-            setContactInfo({ ...contactInfo, name: e.target.value })
+            setContactInfo({ ...contactInfo, firstName: e.target.value })
           }
         />
+        </div>
         <div>
           <label
             htmlFor="phone"
@@ -125,7 +129,7 @@ ${contact.organization ? `ORG:${contact.organization}\n` : ''}END:VCARD`;
             >
               Download QR Code
             </a>
-          </div>
+          
         )}
       </div>
     </form>
