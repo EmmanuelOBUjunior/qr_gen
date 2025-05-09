@@ -15,7 +15,7 @@ const ContactForm = () => {
     email: '',
     organization: ''
   })
-  const [qrCode setQrCode] = useState<string>('')
+  const [qrCode,setQrCode] = useState<string>('')
   const generateVCard = async(contact:ContactInfo)=>{
       return `BEGIN:VCARD VERSION:3.0 FN:${contact.name} TEL:${contact.phone} EMAIL:${contact.email} ${contact.organization ? `ORG:${contact.organization}\n`: ''}  END:VCARD`
   }
