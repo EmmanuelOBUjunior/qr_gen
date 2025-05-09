@@ -82,13 +82,17 @@ const ContactForm = () => {
             className="mt-1 p-2 w-full border rounded-md"
             value={contactInfo.email}
             onChange={(e) =>
-              setContactInfo({...contactInfo, email: e.target.value })
+              setContactInfo({ ...contactInfo, email: e.target.value })
             }
           />
         </div>
         <div>
           <label htmlFor="organization">Organization (Optional)</label>
-          <input type="text" id="organization" className="mt-1 block w-full rounded border-gray-399 shadow-sm focus:border-blue-500 focus:ring-blue-500"/>
+          <input
+            type="text"
+            id="organization"
+            className="mt-1 block w-full rounded border-gray-399 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+          />
         </div>
       </div>
     </form>
