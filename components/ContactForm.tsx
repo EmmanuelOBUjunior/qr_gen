@@ -31,7 +31,7 @@ const ContactForm = () => {
   }
 
   return (
-    <div>ContactForm</div>
+    <form className='space-y-4' onSubmit={handleSubmit}>ContactForm</form>
   )
 }
 
