@@ -43,7 +43,9 @@ const PDFUploader = () => {
       setUploading(false);
     }
   };
-  return <div>PDFUploader</div>;
+  return (<div className="space-y-4">
+    <div className="border-2 border-dashed border-gray-300 rounded-lg p-6"></div>
+  </div>);
 };
 
 export default PDFUploader;
