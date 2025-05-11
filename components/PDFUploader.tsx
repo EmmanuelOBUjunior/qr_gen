@@ -59,6 +59,7 @@ const PDFUploader = () => {
           onChange={handleFileChange}
           className="w-full"
         />
+         <p className="text-sm text-gray-500 mt-2">Maximum file size: 5MB</p>
       </div>
       {error && <p className="text-red-500">{error}</p>}
       <button
