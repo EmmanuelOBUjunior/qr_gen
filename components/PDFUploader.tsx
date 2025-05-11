@@ -54,12 +54,24 @@ const PDFUploader = () => {
         />
       </div>
       {error && <p className="text-red-500">{error}</p>}
-      <button onClick={handleUpload} disabled={!file || uploading} className={`w-full py-2 px-4 rounded ${!file || uploading} ? 'bg-gray-300 cursor-not-allowed': 'bg-blue-500 text-white hover:bg-blue-600'`}>
+      <button
+        onClick={handleUpload}
+        disabled={!file || uploading}
+        className={`w-full py-2 px-4 rounded ${
+          !file || uploading
+        } ? 'bg-gray-300 cursor-not-allowed': 'bg-blue-500 text-white hover:bg-blue-600'`}
+      >
         Upload and Generate QR Code
       </button>
       {qrCode && (
         <div className="text-center">
-          <Image width={250} height={250} alt='PDF QR Code' src={qrCode} className="mx-auto"/>
+          <Image
+            width={250}
+            height={250}
+            alt="PDF QR Code"
+            src={qrCode}
+            className="mx-auto"
+          />
         </div>
       )}
     </div>
