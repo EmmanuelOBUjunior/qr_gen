@@ -35,9 +35,12 @@ const PDFUploader = () => {
 
       //Generate QR Code with the file URL
       const qrDataURL  = await QRCode.toDataURL(data.fileUrl);
+      setQrCode(qrDataURL);
 
     } catch (error) {
       console.error(error);
+    }finally{
+      setUploading(false);
     }
   };
   return <div>PDFUploader</div>;
