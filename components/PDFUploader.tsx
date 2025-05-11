@@ -13,13 +13,18 @@ const PDFUploader = () => {
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const selectedFile = e.target.files[0];
-      if (selectedFile.type === "application/pdf") {
-        setFile(selectedFile);
-        setError("");
-      } else {
+      if (selectedFile.type !== "application/pdf") {
         setError("Please select a PDF file");
-        setFile(null);
+        setFile(null)
+        return
       }
+      if(selectedFile.size > MAX_FILE_SIZE){
+        setError('File size must be less than 5MB')
+        setFile(null)
+        return
+      }
+      setFile(selectedFile)
+      setError("");
     }
   };
   const handleUpload = async () => {
