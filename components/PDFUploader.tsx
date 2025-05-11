@@ -8,6 +8,8 @@ const PDFUploader = () => {
   const [error, setError] = useState<string>("");
   const [qrCode, setQrCode] = useState<string | null>(null);
 
+  const MAX_FILE_SIZE = 5 * 1024 * 1024; //5MB
+
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const selectedFile = e.target.files[0];
