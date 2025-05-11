@@ -30,22 +30,23 @@ const PDFUploader = () => {
         method: "POST",
         body: formData,
       });
-      const data =await response.json();
-      if(!response.ok) throw new Error(data.message)
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.message);
 
       //Generate QR Code with the file URL
-      const qrDataURL  = await QRCode.toDataURL(data.fileUrl);
+      const qrDataURL = await QRCode.toDataURL(data.fileUrl);
       setQrCode(qrDataURL);
-
     } catch (error) {
       console.error(error);
-    }finally{
+    } finally {
       setUploading(false);
     }
   };
-  return (<div className="space-y-4">
-    <div className="border-2 border-dashed border-gray-300 rounded-lg p-6"></div>
-  </div>);
+  return (
+    <div className="space-y-4">
+      <div className="border-2 border-dashed border-gray-300 rounded-lg p-6"></div>
+    </div>
+  );
 };
 
 export default PDFUploader;
