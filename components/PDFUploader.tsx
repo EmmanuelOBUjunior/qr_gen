@@ -44,7 +44,11 @@ const PDFUploader = () => {
   };
   return (
     <div className="space-y-4">
-      <div className="border-2 border-dashed border-gray-300 rounded-lg p-6"></div>
+      <div className="border-2 border-dashed border-gray-300 rounded-lg p-6">
+        <input type="file" accept=".pdf" onChange={handleFileChange} className="w-full"/>
+      </div>
+      {error && <p className="text-red-500">{error}</p>}
+      <button onClick={handleUpload} disabled={!file || uploading}>Upload and Generate QR Code</button>
     </div>
   );
 };
