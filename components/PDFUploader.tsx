@@ -72,6 +72,7 @@ const PDFUploader = () => {
             src={qrCode}
             className="mx-auto"
           />
+          <a href={qrCode} download='pdf-qr-Code.png' className="mt-2 inline-block text-blue-500 hover:text-blue-600">Download QR Code</a>
         </div>
       )}
     </div>
