@@ -30,6 +30,11 @@ const PDFUploader = () => {
         method: "POST",
         body: formData,
       });
+      const data =await response.json();
+      if(!response.ok) throw new Error(data.message)
+
+      //Generate QR Code with the file URL
+
 
     } catch (error) {
       console.error(error);
