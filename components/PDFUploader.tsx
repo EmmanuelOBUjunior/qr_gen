@@ -53,7 +53,7 @@ const PDFUploader = () => {
         />
       </div>
       {error && <p className="text-red-500">{error}</p>}
-      <button onClick={handleUpload} disabled={!file || uploading}>
+      <button onClick={handleUpload} disabled={!file || uploading} className={`w-full py-2 px-4 rounded ${!file || uploading}`}>
         Upload and Generate QR Code
       </button>
     </div>
