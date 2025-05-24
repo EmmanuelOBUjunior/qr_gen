@@ -1,4 +1,5 @@
-import { Buffer } from './../../../node_modules/protobufjs/index.d';
+import { storage } from '@/lib/firebase';
+import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { MAX_FILE_SIZE } from "@/constants";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -35,6 +36,12 @@ export async function POST(request:NextRequest){
         //Generate unique filename
         const timeStamp = Date.now()
         const fileName = `${timeStamp}_${file.name.replace(/\s+/g, '-')}`
+
+        //Create a reference to the file in firebase storage
+        const storageRef = ref(storage, `pdfs/${fileName}`)
+
+        //Upload the file to firebase storage
+        await uploadBytes(storageRef, buffer)
 
 
     } catch (error) {
