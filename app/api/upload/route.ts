@@ -1,3 +1,4 @@
+import { Buffer } from './../../../node_modules/protobufjs/index.d';
 import { MAX_FILE_SIZE } from "@/constants";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -26,6 +27,14 @@ export async function POST(request:NextRequest){
                 status: 400
             })
         }
+
+        //Convert file to buffer
+        const bytes = await file.arrayBuffer()
+        const buffer = Buffer.from(bytes)
+
+        //Generate unique filename
+        const timeStamp = Date.now()
+        const fileName = `${timeStamp}_${file.name.replace(/\s+/g, '-')}`
 
 
     } catch (error) {
