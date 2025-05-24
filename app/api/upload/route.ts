@@ -1,4 +1,4 @@
-import { storage } from '@/lib/firebase';
+import { storage } from "@/utils/firebase";
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { MAX_FILE_SIZE } from "@/constants";
 import { NextRequest, NextResponse } from "next/server";
