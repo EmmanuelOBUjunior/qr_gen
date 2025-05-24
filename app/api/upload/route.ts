@@ -43,6 +43,14 @@ export async function POST(request:NextRequest){
         //Upload the file to firebase storage
         await uploadBytes(storageRef, buffer)
 
+        //Get the download URL of the uploaded file
+        const fileURL = await getDownloadURL(storageRef)
+
+        return NextResponse.json({
+            message: 'File uploaded successfully',
+            fileURL
+        },{status:200})
+
 
     } catch (error) {
         console.error("Something happened: ", error);
